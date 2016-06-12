@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Hero {
-  constructor(public id: number, public name: string){
-    
-  }
-}
+import Hero, {HEROES} from './heroes';
 
 @Component({
   moduleId: module.id,
@@ -13,6 +8,7 @@ export class Hero {
   styleUrls: ['tour-of-heroes.component.css']
 })
 export class TourOfHeroesAppComponent {
-  title = 'Tour of Heroes with angular CLI!';
-  hero = new Hero(1, 'Windstorm');
+  public title = 'Tour of Heroes with angular CLI!';
+  public hero = new Hero(1, 'Windstorm');
+  public heroes = HEROES;
 }
