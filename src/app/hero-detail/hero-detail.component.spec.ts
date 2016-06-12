@@ -20,9 +20,9 @@ describe('Component: HeroDetail', () => {
   }));
 
   it('should inject the component', inject([HeroDetailComponent],
-      (component: HeroDetailComponent) => {
-    expect(component).toBeTruthy();
-  }));
+    (component: HeroDetailComponent) => {
+      expect(component).toBeTruthy();
+    }));
 
   it('should create the component', inject([], () => {
     return builder.createAsync(HeroDetailComponentTestController)
