@@ -9,7 +9,7 @@ import Hero, {HEROES} from './heroes';
 })
 export class TourOfHeroesAppComponent {
   public title = 'Tour of Heroes with angular CLI!';
-  public selectedHero: Hero = <Hero>{};
+  public selectedHero: Hero;
   public heroes = HEROES;
 
   onSelect(hero: Hero) {
