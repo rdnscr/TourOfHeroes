@@ -22,6 +22,7 @@ const barrels: string[] = [
   '@angular/router',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
+  '@angular/router-deprecated',
 
   // Thirdparty barrels.
   'rxjs',
@@ -31,6 +32,10 @@ const barrels: string[] = [
   'app/shared',
   'app/heroes-detail',
   'app/hero-detail',
+  'app/app',
+  'app/+hero-detail',
+  'app/+dashboard',
+  'app/+heroes',
   /** @cli-barrel */
 ];
 

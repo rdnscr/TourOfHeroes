@@ -9,25 +9,25 @@ import {
 import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testing';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesComponent } from './heroes.component';
 
-describe('Component: HeroDetail', () => {
+describe('Component: Heroes', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [HeroDetailComponent]);
+  beforeEachProviders(() => [HeroesComponent]);
   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
     builder = tcb;
   }));
 
-  it('should inject the component', inject([HeroDetailComponent],
-    (component: HeroDetailComponent) => {
-      expect(component).toBeTruthy();
-    }));
+  it('should inject the component', inject([HeroesComponent],
+      (component: HeroesComponent) => {
+    expect(component).toBeTruthy();
+  }));
 
   it('should create the component', inject([], () => {
-    return builder.createAsync(HeroDetailComponentTestController)
+    return builder.createAsync(HeroesComponentTestController)
       .then((fixture: ComponentFixture<any>) => {
-        let query = fixture.debugElement.query(By.directive(HeroDetailComponent));
+        let query = fixture.debugElement.query(By.directive(HeroesComponent));
         expect(query).toBeTruthy();
         expect(query.componentInstance).toBeTruthy();
       });
@@ -37,10 +37,10 @@ describe('Component: HeroDetail', () => {
 @Component({
   selector: 'test',
   template: `
-    <app-hero-detail></app-hero-detail>
+    <app-heroes></app-heroes>
   `,
-  directives: [HeroDetailComponent]
+  directives: [HeroesComponent]
 })
-class HeroDetailComponentTestController {
+class HeroesComponentTestController {
 }
 

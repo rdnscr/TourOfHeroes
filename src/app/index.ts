@@ -1,2 +1,2 @@
 export * from './environment';
-export * from './tour-of-heroes.component';
+export { AppComponent } from './app.component';
