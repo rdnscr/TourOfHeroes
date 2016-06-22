@@ -11,7 +11,7 @@ import HeroService from './shared/hero.service';
   selector: 'app',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  directives: [ROUTER_DIRECTIVES, HeroesComponent],
+  directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS, HeroService]
 })
 @RouteConfig([
@@ -33,5 +33,5 @@ import HeroService from './shared/hero.service';
   }
 ])
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Tour of Heroes with angular CLI!';
 }
