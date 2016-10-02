@@ -1,3 +1,3 @@
-export * from './mock-heroes';
-export * from './hero';
 export * from './hero.service';
+export * from './hero.type';
+export * from './mock-heroes';

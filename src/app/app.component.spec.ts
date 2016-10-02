@@ -1,45 +1,33 @@
-// import {
-//   beforeEach,
-//   beforeEachProviders,
-//   describe,
-//   expect,
-//   it,
-//   inject,
-// } from '@angular/core/testing';
-// import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testing';
-// import { Component } from '@angular/core';
-// import { By } from '@angular/platform-browser';
-// import { AppComponent } from './app.component';
-// import {ROUTER_FAKE_PROVIDERS} from '@angular/router/testing';
+/* tslint:disable:no-unused-variable */
 
-// describe('Component: App', () => {
-//   let builder: TestComponentBuilder;
+import { TestBed, async } from '@angular/core/testing';
+import { AppComponent } from './app.component';
 
-//   beforeEachProviders(() => [AppComponent, ROUTER_FAKE_PROVIDERS]);
-//   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
-//     builder = tcb;
-//   }));
+describe('App: TourOfHeroes2', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent
+      ],
+    });
+  });
 
-//   it('should inject the component', inject([AppComponent],
-//       (component: AppComponent) => {
-//     expect(component).toBeTruthy();
-//   }));
+  // it('should create the app', async(() => {
+  //   let fixture = TestBed.createComponent(AppComponent);
+  //   let app = fixture.debugElement.componentInstance;
+  //   expect(app).toBeTruthy();
+  // }));
 
-//   it('should create the component', inject([], () => {
-//     return builder.createAsync(AppComponentTestController)
-//       .then((fixture: ComponentFixture<any>) => {
-//         let query = fixture.debugElement.query(By.directive(AppComponent));
-//         expect(query).toBeTruthy();
-//         expect(query.componentInstance).toBeTruthy();
-//       });
-//   }));
-// });
+  // it(`should have as title 'app works!'`, async(() => {
+  //   let fixture = TestBed.createComponent(AppComponent);
+  //   let app = fixture.debugElement.componentInstance;
+  //   expect(app.title).toEqual('app works!');
+  // }));
 
-// @Component({
-//   selector: 'test',
-//   template: `<app></app>`,
-//   directives: [AppComponent]
-// })
-// class AppComponentTestController {
-// }
-
+  // it('should render title in a h1 tag', async(() => {
+  //   let fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   let compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('h1').textContent).toContain('app works!');
+  // }));
+});

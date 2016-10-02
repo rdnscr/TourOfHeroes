@@ -1,17 +1,16 @@
-import {
-  beforeEachProviders,
-  it,
-  describe,
-  expect,
-  inject
-} from '@angular/core/testing';
-import HeroService from './hero.service';
+/* tslint:disable:no-unused-variable */
 
-describe('Hero Service', () => {
-  beforeEachProviders(() => [HeroService]);
+import { TestBed, async, inject } from '@angular/core/testing';
+import { HeroService } from './hero.service';
 
-  it('should ...',
-      inject([HeroService], (service: HeroService) => {
+describe('Service: Hero', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [HeroService]
+    });
+  });
+
+  it('should ...', inject([HeroService], (service: HeroService) => {
     expect(service).toBeTruthy();
   }));
 });
